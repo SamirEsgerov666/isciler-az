@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İşçilər.az</title>
+    <style>
+        /* Premium Tünd mövzu dizaynı */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; /* Dərin göy/qara ton */
+            color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #38bdf8; /* Parlaq mavi ton */
+            font-size: 2.2rem;
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+            margin: 0;
+        }
+
+        section {
+            background-color: #1e293b; /* Müasir boz-göy kart rəngi */
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            width: 100%;
+            max-width: 450px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 8px;
+            font-size: 1.4rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+
+        input {
+            background-color: #0f172a;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            color: #fff;
+            padding: 12px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+        }
+
+        /* Premium keçidli (gradient) düymə */
+        button {
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>İşçilər.az</h1>
+    </header>
+
+    <section>
+        <h2>Axtarış</h2>
+        <form>
+            <label for="city">Şəhər:</label>
+            <input type="text" id="city" placeholder="Məsələn, Bakı">
+
+            <label for="category">Sahə:</label>
+            <input type="text" id="category" placeholder="Məsələn, Fəhlə">
+
+            <button type="submit">Axtar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Qeydiyyat</h2>
+        <form>
+            <label for="name">Ad:</label>
+            <input type="text" id="name" required placeholder="Adınız">
+
+            <label for="email">E-poçt:</label>
+            <input type="email" id="email" required placeholder="nümunə@mail.com">
+
+            <button type="submit">Qeydiyyatdan keç</button>
+        </form>
+    </section>
+
+</body>
+</html>
