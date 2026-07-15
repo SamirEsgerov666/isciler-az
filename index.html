@@ -1,136 +1,84 @@
-<!DOCTYPE html>
 <html lang="az">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İşçilər.az</title>
+    <title>İş-elanı-365gun</title>
     <style>
-        /* Premium Tünd mövzu dizaynı */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a; /* Dərin göy/qara ton */
-            color: #f8fafc;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            color: #38bdf8; /* Parlaq mavi ton */
-            font-size: 2.2rem;
-            text-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
-            margin: 0;
-        }
-
-        section {
-            background-color: #1e293b; /* Müasir boz-göy kart rəngi */
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 25px;
-            width: 100%;
-            max-width: 450px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        h2 {
-            color: #38bdf8;
-            margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #334155;
-            padding-bottom: 8px;
-            font-size: 1.4rem;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #94a3b8;
-        }
-
-        input {
-            background-color: #0f172a;
-            border: 1px solid #475569;
-            border-radius: 6px;
-            color: #fff;
-            padding: 12px;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        input:focus {
-            border-color: #38bdf8;
-            box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
-        }
-
-        /* Premium keçidli (gradient) düymə */
-        button {
-            background: linear-gradient(135deg, #38bdf8, #0284c7);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            padding: 12px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s, opacity 0.2s;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            opacity: 0.9;
-        }
-
-        button:active {
-            transform: scale(0.98);
-        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f9f9f9; margin: 0; display: flex; flex-direction: column; align-items: center; padding-bottom: 50px; }
+        .hero-banner { width: 100%; height: 250px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; }
+        h1 { font-size: 3rem; margin: 20px 0; color: #333; }
+        .category-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 20px; max-width: 800px; }
+        .category-btn { background: #fff; border: 1px solid #ddd; padding: 12px 25px; border-radius: 25px; cursor: pointer; transition: 0.3s; font-weight: bold; }
+        .category-btn:hover { background: #1a73e8; color: white; }
+        .payment-box, .complaint-box { background: #fff; padding: 25px; border-radius: 12px; border: 2px solid #34A853; margin: 15px; text-align: center; width: 320px; }
+        .complaint-box { border: 2px solid #e74c3c; }
+        #adminPanel { display: none; background: #333; color: white; padding: 20px; width: 90%; max-width: 600px; border-radius: 10px; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>İşçilər.az</h1>
-    </header>
+<div class="hero-banner">
+    <h1>İş-elanı-365gun</h1>
+    <p>Xəyallarınızdakı iş bir addımlıqdadır!</p>
+</div>
 
-    <section>
-        <h2>Axtarış</h2>
-        <form>
-            <label for="city">Şəhər:</label>
-            <input type="text" id="city" placeholder="Məsələn, Bakı">
+<div class="category-grid">
+    <button class="category-btn">Fəhlə</button>
+    <button class="category-btn">İşçi</button>
+    <button class="category-btn">Kuryer</button>
+    <button class="category-btn">Təmizlikçi</button>
+    <button class="category-btn">Bağban</button>
+    <button class="category-btn">Usta</button>
+    <button class="category-btn">Sürücü</button>
+    <button class="category-btn">Satıcı</button>
+</div>
 
-            <label for="category">Sahə:</label>
-            <input type="text" id="category" placeholder="Məsələn, Fəhlə">
+<div class="payment-box">
+    <h3 style="color: #34A853; margin-top:0;">Premium Ödəniş</h3>
+    <p style="font-weight: bold; font-size: 1.2rem;">4169 7388 0542 1389</p>
+    <p style="font-size: 12px; color: #666;">Nuray - Kapital Bank</p>
+    <input type="file" accept="image/*">
+</div>
 
-            <button type="submit">Axtar</button>
-        </form>
-    </section>
+<div class="complaint-box">
+    <h3 style="color: #e74c3c; margin-top:0;">Şikayət və Təklif</h3>
+    <textarea id="complaintText" style="width:100%; height:80px;"></textarea>
+    <button onclick="saveComplaint()" style="background:#e74c3c; color:white; border:none; padding:10px; width:100%; margin-top:10px;">Göndər</button>
+</div>
 
-    <section>
-        <h2>Qeydiyyat</h2>
-        <form>
-            <label for="name">Ad:</label>
-            <input type="text" id="name" required placeholder="Adınız">
+<div style="margin: 40px;">
+    <button onclick="loginAdmin()" style="background:none; border:none; color:gray; cursor:pointer;">Adminə giriş</button>
+</div>
 
-            <label for="email">E-poçt:</label>
-            <input type="email" id="email" required placeholder="nümunə@mail.com">
+<div id="adminPanel">
+    <h2>Admin Paneli</h2>
+    <div id="adminContent">
+        <p>Bura şikayətlər düşəcək:</p>
+        <ul id="complaintList"></ul>
+    </div>
+</div>
 
-            <button type="submit">Qeydiyyatdan keç</button>
-        </form>
-    </section>
+<script>
+    function saveComplaint() {
+        let text = document.getElementById('complaintText').value;
+        localStorage.setItem('lastComplaint', text);
+        alert('Mesajınız adminə göndərildi!');
+        document.getElementById('complaintText').value = '';
+    }
+
+    function loginAdmin() {
+        let username = prompt("İstifadəçi adınızı (nik) daxil edin:");
+        let password = prompt("Şifrəni daxil et:");
+
+        if (username === "Sem666" && password === "0554289090Samir") {
+            document.getElementById('adminPanel').style.display = 'block';
+            let list = document.getElementById('complaintList');
+            let complaint = localStorage.getItem('lastComplaint');
+            list.innerHTML = "<li>" + (complaint ? complaint : "Hələlik şikayət yoxdur") + "</li>";
+        } else {
+            alert("İstifadəçi adı və ya şifrə yanlışdır!");
+        }
+    }
+</script>
 
 </body>
 </html>
